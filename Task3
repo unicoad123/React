@@ -1,0 +1,49 @@
+class Person
+{
+  gender='male';
+  
+  printGender()
+  {
+    console.log(this.gender);
+  }
+}
+class Human extends Person
+{
+    name='Max';
+    age=34;
+    gender='female';
+  
+ printMyName()
+  {
+    console.log(this.name);
+  }
+  printAge()
+  {
+     console.log(this.age);
+  }
+}
+const human=new Human();
+human.printGender();
+human.printMyName();
+human.printAge();
+//////spread and rest operator///////////
+const numbers=[1,2,3];
+const newNnumbers=[...numbers,4,7];
+
+console.log(newNnumbers);
+
+const Person=
+{
+  name:'max'
+
+}
+const human={
+  ...Person,
+  age:30,
+  gender:'male'
+}
+
+/////////Destructuring////////////
+const numbers=[1,2,3];
+[num1, ,num3]=numbers;
+console.log(num1, num3);
