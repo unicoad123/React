@@ -6,19 +6,19 @@ import Card from '../UI/Card';
 
 const ExpenseItem=(props)=>
 {
-    const [title1,setTitle]= useState(props.title);
-    const[amount1,setExpense]=useState(props.amount);
-    const title=()=>
-    {
-        setTitle('Updated!');
-        console.log(title1);
-    }
-    const expense=()=>
-    {
-        setExpense('100');
-        console.log(amount1);
+    // const [title1,setTitle]= useState(props.title);
+    // const[amount1,setExpense]=useState(props.amount);
+    // const title=()=>
+    // {
+    //     setTitle('Updated!');
+    //     console.log(title1);
+    // }
+    // const expense=()=>
+    // {
+    //     setExpense('100');
+    //     console.log(amount1);
     
-    }
+    // }
     // const setState=setState();
     // const delete_title=(props)=>
     // {
@@ -29,11 +29,9 @@ const ExpenseItem=(props)=>
             <Card className='expense-item'>
             <ExpenseDate date={props.date} />
             <div className='expense-item__description'>
-            <h2>{title1}</h2>
-            <div className='expense-item__price'>${amount1}</div>
-            <button onClick={expense}>Change Expense</button>
+            <h2>{props.title}</h2>
+            <div className='expense-item__price'>${props.amount}</div>
             </div>
-            <button onClick={title}>Change Title</button>
             {/* <button onClick={delete_title}>Delete Title</button> */}
             </Card>
         )
