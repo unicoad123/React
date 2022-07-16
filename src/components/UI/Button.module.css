@@ -1,0 +1,10 @@
+.button{
+    background-color:tomato;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+
+.button:hover{
+    background-color:lightgray;
+}
