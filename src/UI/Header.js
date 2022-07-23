@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Header.module.css'
 import CartItems from './CartItems'
 import Image from './Image'
-
+import Summary from '../components/Summary';
 
 
 const Header=()=>
@@ -13,7 +13,9 @@ const Header=()=>
          <h1>ReactMeals</h1> 
          <CartItems />
          </div>
-         <Image />
+         <Image>
+            <Summary />
+            </Image>
     </div>
     )
 }
