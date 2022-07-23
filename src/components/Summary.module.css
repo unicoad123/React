@@ -1,0 +1,17 @@
+.summary{
+    position: fixed;
+    height: 220px;
+    width:620px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    background-color: rgba(51, 49, 49);
+    margin-top: 360px;
+    margin-left: 230px;
+    border-radius: 10px;
+}
+
+
+.summary h2,p{
+    text-align:center;
+    text-size-adjust: 10px;
+    margin: 20px;
+}
