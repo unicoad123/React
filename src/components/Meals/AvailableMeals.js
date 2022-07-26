@@ -30,6 +30,7 @@ const Items=[
 const AvailableMeals=()=>
 {
     const mealsList=Items.map(Item => <li><MealItem 
+    key={Math.random().toString()}
     id={Item.id} 
     name={Item.ItemName} 
     description={Item.ItemDescription}
