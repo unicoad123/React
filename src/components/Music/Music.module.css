@@ -1,0 +1,11 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+    border: 0px;
+}
+.music{
+        background-color: white;
+        flex-wrap:wrap;
+    display: flex;
+    justify-content:space-around;
+}

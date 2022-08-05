@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+.header_nav
+{
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.header_nav ul{
+    display: flex;
+    margin-left: 450px;
+}
+.header_nav li{
+list-style: none;
+align-items: center;
+
+}
+.header_nav li a{
+    color: white;
+    text-decoration: none;
+    margin: 25px;
+    font:bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
