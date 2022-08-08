@@ -14,6 +14,7 @@ const MovieList = (props) => {
           openingText={movie.openingText}
         />
       ))}
+      <button onClick={props.deletemovies}>Delete Button</button>
     </ul>
   );
 };
