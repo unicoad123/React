@@ -1,23 +1,34 @@
-import React from "react";
-import Signup from './SignUp/Signup';
+import axios from "axios"
+import React, { useState } from "react"
+import "./App.css"
 
 function App() {
-  async function addUserHandler(User) {
-    const response=await fetch('http://localhost:8080/User',{
-      method:'POST',
-      body:JSON.stringify(User),
-      headers:{
-        'Content-Type':'application/json'
-      }
-    });
-    const data=await response.json();
-    console.log(data);
-  }
-  return (
-    <div>
-      <Signup onaddUser={addUserHandler} />
-    </div>
-  );
+	const [ sent, setSent ] = useState(false)
+	const [ text, setText ] = useState("")
+	const handleSend = async (e) => {
+		setSent(true)
+		try {
+			await axios.post("http://localhost:4000/send_mail", {
+				text
+			})
+		} catch (error) {
+			console.error(error)
+		}
+	}
+
+	return (
+		<div className="App">
+			{!sent ? (
+				<form onSubmit={handleSend}>
+					<input type="text" value={text} onChange={(e) => setText(e.target.value)} />
+
+					<button type="submit">Send Email</button>
+				</form>
+			) : (
+				<h1>Email Sent</h1>
+			)}
+		</div>
+	)
 }
 
-export default App;
+export default App
